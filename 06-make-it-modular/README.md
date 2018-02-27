@@ -1,7 +1,7 @@
 ## MAKE IT MODULAR (Exercise 6 of 13)
 m.js:  
 ```js
-module.exports=(a,b,c)=>require('fs').readdir(a,(_,f)=>_?c(_):c(null,f.filter(f=>RegExp('.'+b).test(f))))
+module.exports=(a,b,c)=>require('fs').readdir(a,(_,f)=>_?c(_):c(null,f.filter(f=>~f.indexOf('.'+b))))
 ```
 index.js:  
 ```js
