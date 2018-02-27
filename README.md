@@ -14,7 +14,7 @@ for fun!
 - concat vs using `toString()`, eg: `''+d` vs `d.toString()`
 - `+` vs `Numer()`, eg: `+'200'` vs `Number('200')`
 - store as ref if something is being used more than once, eg: `l=console.log;l(a);l(b)`
-- consider above when accessing object methods, eg: `f='map';a[f](a=>…);b[f](b=>…)`
+- consider above when accessing object methods, eg: `f='forEach';a[f](a=>…);b[f](b=>…)`
 - use node internals, eg: `.Server()` vs `.createServer()`
 - use multiple lines if the column gets too wide
 - loose equality vs strict

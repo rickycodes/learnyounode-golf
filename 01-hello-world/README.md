@@ -2,4 +2,3 @@
 ```js
 console.log('HELLO WORLD')
 ```
-`¯\_(ツ)_/¯`
