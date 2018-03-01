@@ -27,7 +27,9 @@ const readProblemText = (ex, path) => {
   return ex_problem_md.toString().split(_)[0]
 }
 
-const writeMd = (m, index) => {
+const writeReadme = (path, md) => fs.writeFileSync(`${path}/README.md`, md)
+
+const buildReadme = (m, index) => {
   const num = ++index
   const lnum = num < 10 ? `0${num}` : num
   const title = `${m.name} (Exercise ${num} of ${meta.length})`
@@ -48,7 +50,7 @@ ${problem_txt}#### Solution:
     md += '```\n'
   }
 
-  fs.writeFileSync(`${local_folder}/README.md`, md)
+  writeReadme(local_folder, md)
 }
 
-meta.map(writeMd)
+meta.map(buildReadme)
