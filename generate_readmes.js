@@ -1,5 +1,4 @@
 const fs = require('fs')
-const util = require('util')
 
 // location of globally instealled learnyounode
 const ex = '/usr/local/lib/node_modules/learnyounode/exercises/'
@@ -48,6 +47,4 @@ async function writeMd (m, index) {
   fs.writeFileSync(`${local_folder}/README.md`, md)
 }
 
-meta.map((m, index) => {
-  writeMd(m, index)
-})
+meta.map(writeMd)
