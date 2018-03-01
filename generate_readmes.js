@@ -34,10 +34,10 @@ const writeMd = (m, index) => {
   const problem_txt = ex_problem_md.toString().split(_)[0]
   const files = fs.readdirSync(local_folder).filter(file => /\.js$/.test(file))
 
-  md += `#### Problem:\n`
+  md += '#### Problem:\n'
   md += problem_txt
 
-  md += `#### Solution:\n`
+  md += '#### Solution:\n'
   for (let file of files) {
     const js = fs.readFileSync(`${local_folder}/${file}`).toString()
     md += `${file}\n`
