@@ -20,7 +20,7 @@ const meta = [
   { path: 'http_json_api_server', name: 'HTTP JSON API SERVER' }
 ]
 
-async function writeMd (m, index) {
+const writeMd = (m, index) => {
   const num = ++index
   const lnum = num < 10 ? `0${num}` : num
   const title = `${m.name} (Exercise ${num} of ${meta.length})`
@@ -28,18 +28,18 @@ async function writeMd (m, index) {
   let md = `### ${title}\n`
 
   const local_folder = `${lnum}-${m.path}`
-  const ex_problem_md = await fs.readFileSync(`${ex}${m.path}/problem.md`)
+  const ex_problem_md = fs.readFileSync(`${ex}${m.path}/problem.md`)
   // hope this never changes ¯\_(ツ)_/¯
   const _ = '----------------------------------------------------------------------'
   const problem_txt = ex_problem_md.toString().split(_)[0]
-  const files = await fs.readdirSync(local_folder).filter(file => /\.js$/.test(file))
+  const files = fs.readdirSync(local_folder).filter(file => /\.js$/.test(file))
 
   md += `#### Problem:\n`
   md += problem_txt
 
   md += `#### Solution:\n`
   for (let file of files) {
-    const js = await fs.readFileSync(`${local_folder}/${file}`).toString()
+    const js = fs.readFileSync(`${local_folder}/${file}`).toString()
     md += `${file}\n`
     md += '```js\n'
     md += js
