@@ -20,24 +20,26 @@ const meta = [
   { path: 'http_json_api_server', name: 'HTTP JSON API SERVER' }
 ]
 
+const readProblemText = (ex, path) => {
+  const ex_problem_md = fs.readFileSync(`${ex}${path}/problem.md`)
+  // hope this never changes ¯\_(ツ)_/¯
+  const _ = Array(70).join('-')
+  return ex_problem_md.toString().split(_)[0]
+}
+
 const writeMd = (m, index) => {
   const num = ++index
   const lnum = num < 10 ? `0${num}` : num
   const title = `${m.name} (Exercise ${num} of ${meta.length})`
-
-  let md = `### ${title}\n`
-
   const local_folder = `${lnum}-${m.path}`
-  const ex_problem_md = fs.readFileSync(`${ex}${m.path}/problem.md`)
-  // hope this never changes ¯\_(ツ)_/¯
-  const _ = '----------------------------------------------------------------------'
-  const problem_txt = ex_problem_md.toString().split(_)[0]
+  const problem_txt = readProblemText(ex, m.path)
   const files = fs.readdirSync(local_folder).filter(file => /\.js$/.test(file))
 
-  md += '#### Problem:\n'
-  md += problem_txt
+  let md = `### ${title}
+#### Problem:
+${problem_txt}#### Solution:
+`
 
-  md += '#### Solution:\n'
   for (let file of files) {
     const js = fs.readFileSync(`${local_folder}/${file}`).toString()
     md += `${file}\n`
