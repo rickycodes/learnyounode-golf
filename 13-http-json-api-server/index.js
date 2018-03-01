@@ -1,5 +1,5 @@
 q=require;q('http').Server((_,s)=>{
-  p=q('url').parse(_.url,1),t=new Date(p.query.iso),u=_.url
+  t=new Date(q('url').parse(u=_.url,1).query.iso)
   r=(/^\/api\/parsetime/.test(u))&&({
     hour:t.getHours(),
     minute:t.getMinutes(),
