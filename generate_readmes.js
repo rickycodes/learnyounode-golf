@@ -1,3 +1,4 @@
+// this will build nice READMEs for all the problems
 const fs = require('fs')
 
 // location of globally instealled learnyounode
@@ -28,6 +29,7 @@ async function writeMd (m, index) {
 
   const local_folder = `${lnum}-${m.path}`
   const ex_problem_md = await fs.readFileSync(`${ex}${m.path}/problem.md`)
+  // hope this never changes ¯\_(ツ)_/¯
   const _ = '----------------------------------------------------------------------'
   const problem_txt = ex_problem_md.toString().split(_)[0]
   const files = await fs.readdirSync(local_folder).filter(file => /\.js$/.test(file))
