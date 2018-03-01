@@ -29,5 +29,5 @@ a=process.argv;require('./m')(a[2],a[3],(_,l)=>l.map(f=>console.log(f)))
 m.js
 ```js
 module.exports=(a,b,c)=>
-  require('fs').readdir(a,(_,f)=>_?c(_):c(null,f.filter(f=>~f.indexOf('.'+b))))
+  require('fs').readdir(a,(e,f)=>c(e,e?null:f.filter(f=>f.endsWith('.'+b))))
 ```
