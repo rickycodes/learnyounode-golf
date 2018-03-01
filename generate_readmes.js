@@ -40,7 +40,7 @@ async function writeMd (m, index) {
   for (let file of files) {
     const js = await fs.readFileSync(`${local_folder}/${file}`).toString()
     md += `${file}\n`
-    md += '```\n'
+    md += '```js\n'
     md += js
     md += '```\n'
   }
