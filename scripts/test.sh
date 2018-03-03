@@ -7,9 +7,9 @@ if [ ! -d "$learnyounode" ]; then
   exit 1
 fi
 
-for folder in $(ls | grep '[0-13]');
+for folder in $(ls -d */ | grep '[0-13]');
 do
-  ${bin} select ${counter}
+  ${bin} select ${counter} &> /dev/null
   verify=$(${bin} verify ${folder}/index.js)
   echo ${verify}
   check=$(echo ${verify} | grep FAIL)
