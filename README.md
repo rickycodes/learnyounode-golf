@@ -1,3 +1,5 @@
+[![build status](https://api.travis-ci.org/rickycodes/learnyounode-golf.svg?branch=master)](https://travis-ci.org/rickycodes/learnyounode-golf/)
+
 #### learnyounode as code golf ⛳
 
 my attempt at solving [`learnyounode`](https://github.com/workshopper/learnyounode) with the least amount of code possible

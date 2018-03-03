@@ -1,9 +1,6 @@
 // this will build nice READMEs for all the problems
 const fs = require('fs')
 
-// location of globally instealled learnyounode
-const ex = '/usr/local/lib/node_modules/learnyounode/exercises/'
-
 const meta = [
   { path: 'hello_world', name: 'HELLO WORLD' },
   { path: 'baby_steps', name: 'BABY STEPS' },
@@ -20,11 +17,17 @@ const meta = [
   { path: 'http_json_api_server', name: 'HTTP JSON API SERVER' }
 ]
 
+const ex = './tmp/node_modules/learnyounode/exercises/'
+
+if (!fs.existsSync(ex)) {
+  console.log('please run `npm run setup` first!')
+  process.exit(1)
+}
+
 const readProblemText = (ex, path) => {
-  const ex_problem_md = fs.readFileSync(`${ex}${path}/problem.md`)
+  const problem = fs.readFileSync(`${ex}${path}/problem.md`).toString()
   // hope this never changes ¯\_(ツ)_/¯
-  const _ = Array(70).join('-')
-  return ex_problem_md.toString().split(_)[0]
+  return problem.substring(0, problem.indexOf(Array(70).join('-')))
 }
 
 const writeReadme = (path, md) => fs.writeFileSync(`${path}/README.md`, md)

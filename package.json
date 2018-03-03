@@ -1,0 +1,21 @@
+{
+  "name": "learnyounode-golf",
+  "version": "1.0.0",
+  "description": "my attempt at solving [`learnyounode`](https://github.com/workshopper/learnyounode) with the least amount of code possible",
+  "scripts": {
+    "build": "node ./scripts/build_readmes.js",
+    "setup": "mkdir tmp && npm i --prefix tmp/ learnyounode && npm run dep",
+    "dep": "npm i --prefix 12-http_uppercaserer/ through2-map",
+    "test": "bash ./scripts/test.sh"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/rickycodes/learnyounode-golf.git"
+  },
+  "author": "@rickycodes",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/rickycodes/learnyounode-golf/issues"
+  },
+  "homepage": "https://github.com/rickycodes/learnyounode-golf#readme"
+}
