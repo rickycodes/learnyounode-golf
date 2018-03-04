@@ -8,6 +8,6 @@ Your server should listen on the port provided by the first argument to your pro
 index.js
 ```js
 r=require;r('http').Server((_,s)=>
-  _.pipe(r('through2-map')(c=>(''+c).toUpperCase())).pipe(s)
+_.pipe(r('through2-map')(c=>(''+c).toUpperCase())).pipe(s)
 ).listen(process.argv[2])
 ```

@@ -3,10 +3,14 @@
   "version": "1.0.0",
   "description": "my attempt at solving [`learnyounode`](https://github.com/workshopper/learnyounode) with the least amount of code possible",
   "scripts": {
-    "build": "node ./scripts/build_readmes.js",
+    "build:readmes": "node ./scripts/build_test.js build readmes",
+    "build:mock": "node ./scripts/build_test.js build mock",
     "setup": "mkdir tmp && npm i --prefix tmp/ learnyounode && npm run dep",
     "dep": "npm i --prefix 12-http_uppercaserer/ through2-map",
-    "test": "bash ./scripts/test.sh"
+    "test:solutions": "bash ./scripts/test_solutions.sh",
+    "test:mock": "node ./scripts/build_test.js test mock",
+    "test:lint": "standard -v scripts/*js",
+    "test": "npm run test:lint && npm run test:solutions && npm run test:mock"
   },
   "repository": {
     "type": "git",
@@ -17,5 +21,8 @@
   "bugs": {
     "url": "https://github.com/rickycodes/learnyounode-golf/issues"
   },
-  "homepage": "https://github.com/rickycodes/learnyounode-golf#readme"
+  "homepage": "https://github.com/rickycodes/learnyounode-golf#readme",
+  "devDependencies": {
+    "standard": "^11.0.0"
+  }
 }

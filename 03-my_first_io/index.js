@@ -1,4 +1,4 @@
 console.log(
-  --(''+require('fs').readFileSync(process.argv[2])).split`
+--(''+require('fs').readFileSync(process.argv[2])).split`
 `.length
 )

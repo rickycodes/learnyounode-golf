@@ -1,14 +1,14 @@
-[![build status](https://api.travis-ci.org/rickycodes/learnyounode-golf.svg?branch=master)](https://travis-ci.org/rickycodes/learnyounode-golf/)
+[![build status](https://api.travis-ci.org/rickycodes/learnyounode-golf.svg?branch=master)](https://travis-ci.org/rickycodes/learnyounode-golf/) [![js-standard-style](https://img.shields.io/badge/code%20style-standard-brightgreen.svg)](http://standardjs.com/)
 
-#### learnyounode as code golf ⛳
+## Learnyounode as code golf ⛳
 
-my attempt at solving [`learnyounode`](https://github.com/workshopper/learnyounode) with the least amount of code possible
+My attempt at solving [`learnyounode`](https://github.com/workshopper/learnyounode) with the least amount of code possible
 
-#### why?
+### Why?
 
-for fun!
+For fun!
 
-#### notes
+### Notes
 - drop spaces and semicolons where possible
 - drop `var`,`let`,`const`,`new`,`function` keywords where possible
 - make use of one letter variable names, eg: `a=[]`
@@ -22,5 +22,41 @@ for fun!
 - loose equality vs strict
 - replace `true` and `false` with `1` and `0`
 
-#### can you do better?
-make a PR!
+### Contributing?
+
+Can you do better? Make a PR! If you can get the solutions down to less characters, be sure to run `npm run build:mock && npm run test:mock && npm run test:solutions` (this will create a new mock file with line counts and ensure both tests pass!). After that be sure to run `npm run build:readmes` to generate new README.md files for your newly added solutions.
+
+### Tests
+
+run all tests:  
+`npm t`
+
+test all solutions:  
+`npm run test:solutions`
+
+test character counts:  
+`npm run test:mock`
+
+### License
+
+MIT License
+
+Copyright (c) 2018 Ricky Miller
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.

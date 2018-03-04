@@ -8,7 +8,7 @@ The full path to the file to read will be provided as the first command-line arg
 index.js
 ```js
 console.log(
-  --(''+require('fs').readFileSync(process.argv[2])).split`
+--(''+require('fs').readFileSync(process.argv[2])).split`
 `.length
 )
 ```
