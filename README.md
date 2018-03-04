@@ -22,7 +22,7 @@ For fun!
 - loose equality vs strict
 - replace `true` and `false` with `1` and `0`
 
-### Contributing?
+### Contributing
 
 Can you do better? Make a PR! If you can get the solutions down to less characters, be sure to run `npm run build:mock && npm run test:mock && npm run test:solutions` (this will create a new mock file with line counts and ensure both tests pass!). After that be sure to run `npm run build:readmes` to generate new README.md files for your newly added solutions.
 
