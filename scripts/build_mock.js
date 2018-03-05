@@ -12,7 +12,7 @@ const buildMock = (m, index) => {
   for (let file of files) {
     const localFile = `${localFolder}/${file}`
     const js = fs.readFileSync(localFile).toString()
-    const length = js.replace('\n').length
+    const { length } = js.replace('\n')
     lines += `${localFile}, ${length}\n`
   }
 }
