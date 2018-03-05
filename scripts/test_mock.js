@@ -1,5 +1,5 @@
 const fs = require('fs')
-const mockFile = './scripts/lines.mock'
+const mockFile = './scripts/chars.mock'
 
 module.exports = () => {
   const mocks = fs.readFileSync(mockFile)
