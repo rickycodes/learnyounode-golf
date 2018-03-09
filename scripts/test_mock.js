@@ -11,7 +11,7 @@ module.exports = () => {
     const localFile = m.substring(0, m.indexOf(','))
     const count = m.substring(m.indexOf(' ') + 1, m.length)
     const js = fs.readFileSync(localFile).toString()
-    const { length } = js.replace('\n')
+    const { length } = js.replace('\n', '')
     if (length > +count) {
       console.log(`your solution for ${localFile} is bigger than mine! ;)`)
       process.exit(1)
