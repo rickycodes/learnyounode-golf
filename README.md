@@ -4,8 +4,6 @@
 
 My attempt at solving [`learnyounode`](https://github.com/workshopper/learnyounode) with the least amount of code possible
 
-![](https://media.giphy.com/media/Zn7rsVqBTPAly/giphy.gif)
-
 ### Why?
 
 For fun!
