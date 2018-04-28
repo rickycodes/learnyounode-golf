@@ -2,6 +2,8 @@
 
 ## Learnyounode as code golf ⛳
 
+[![Greenkeeper badge](https://badges.greenkeeper.io/rickycodes/learnyounode-golf.svg)](https://greenkeeper.io/)
+
 My attempt at solving [`learnyounode`](https://github.com/workshopper/learnyounode) with the least amount of code possible
 
 ### Why?
