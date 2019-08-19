@@ -23,6 +23,6 @@
   },
   "homepage": "https://github.com/rickycodes/learnyounode-golf#readme",
   "devDependencies": {
-    "standard": "^11.0.0"
+    "standard": "^14.0.0"
   }
 }
